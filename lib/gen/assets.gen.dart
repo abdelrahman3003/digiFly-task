@@ -15,6 +15,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/Google.svg
   String get google => 'assets/icons/Google.svg';
 
+  /// File path: assets/icons/arrow-simple.svg
+  String get arrowSimple => 'assets/icons/arrow-simple.svg';
+
+  /// File path: assets/icons/favourite.svg
+  String get favourite => 'assets/icons/favourite.svg';
+
+  /// File path: assets/icons/flter.svg
+  String get flter => 'assets/icons/flter.svg';
+
+  /// File path: assets/icons/home.svg
+  String get home => 'assets/icons/home.svg';
+
   /// File path: assets/icons/lock-solid 1.svg
   String get lockSolid1 => 'assets/icons/lock-solid 1.svg';
 
@@ -27,18 +39,46 @@ class $AssetsIconsGen {
   /// File path: assets/icons/person.svg
   String get person => 'assets/icons/person.svg';
 
+  /// File path: assets/icons/setting.svg
+  String get setting => 'assets/icons/setting.svg';
+
+  /// File path: assets/icons/text_editor.svg
+  String get textEditor => 'assets/icons/text_editor.svg';
+
   /// List of all assets
-  List<String> get values => [google, lockSolid1, logo, mail, person];
+  List<String> get values => [
+        google,
+        arrowSimple,
+        favourite,
+        flter,
+        home,
+        lockSolid1,
+        logo,
+        mail,
+        person,
+        setting,
+        textEditor
+      ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/box.png
+  AssetGenImage get box => const AssetGenImage('assets/images/box.png');
+
+  /// File path: assets/images/fly.png
+  AssetGenImage get fly => const AssetGenImage('assets/images/fly.png');
+
   /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
+  /// File path: assets/images/profle_pic.png
+  AssetGenImage get proflePic =>
+      const AssetGenImage('assets/images/profle_pic.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [logo];
+  List<AssetGenImage> get values => [box, fly, logo, proflePic];
 }
 
 class Assets {

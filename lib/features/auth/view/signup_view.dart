@@ -34,8 +34,14 @@ class SignupView extends StatelessWidget {
               const SizedBox(height: 24),
               const PasswordTextField(hintText: "Confirm password"),
               const SizedBox(height: 40),
-              const SizedBox(
-                  width: double.infinity, child: AppButton(title: "Sign up")),
+              SizedBox(
+                  width: double.infinity,
+                  child: AppButton(
+                    title: "Sign up",
+                    onPressed: () {
+                      context.pushNameed(AppRoutes.singinView);
+                    },
+                  )),
               const SizedBox(height: 60),
               DoHaveAccount(
                 title: "Already have an account ?",

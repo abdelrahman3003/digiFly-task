@@ -1,3 +1,4 @@
+import 'package:digifly/features/home/home_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/view/signin_view.dart';
@@ -9,10 +10,12 @@ class AppRoutes {
   static const String homeView = '/homepage';
   static Route generateRoute(RouteSettings setting) {
     switch (setting.name) {
-      case "/" || singinView:
+      case singinView:
         return MaterialPageRoute(builder: (context) => const SigninView());
       case signupView:
         return MaterialPageRoute(builder: (context) => const SignupView());
+      case "/":
+        return MaterialPageRoute(builder: (context) => const HomeView());
       default:
         return MaterialPageRoute(
           builder: (context) => Scaffold(

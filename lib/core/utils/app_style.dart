@@ -25,4 +25,8 @@ class AppStyle {
     fontWeight: FontWeight.w700,
     color: Colors.black,
   );
+  static TextStyle style12font600grey = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w700,
+      color: const Color(0xff808080));
 }
