@@ -36,8 +36,14 @@ class SigninView extends StatelessWidget {
             const SizedBox(height: 24),
             const ForgetPasswordRow(),
             const SizedBox(height: 40),
-            const SizedBox(
-                width: double.infinity, child: AppButton(title: "Login")),
+            SizedBox(
+                width: double.infinity,
+                child: AppButton(
+                  title: "Login",
+                  onPressed: () {
+                    context.pushNameed(AppRoutes.homeView);
+                  },
+                )),
             const SizedBox(height: 24),
             Text("Or",
                 style: AppStyle.style14font500black
