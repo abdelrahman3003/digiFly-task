@@ -5,8 +5,8 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/utils/app_style.dart';
 
 class PasswordTextField extends StatefulWidget {
-  const PasswordTextField({super.key});
-
+  const PasswordTextField({super.key, required this.hintText});
+  final String hintText;
   @override
   State<PasswordTextField> createState() => _PasswordTextFieldState();
 }
@@ -30,7 +30,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
             },
             icon: Icon(isVisibile ? Icons.visibility : Icons.visibility_off,
                 color: const Color(0xffCCCCCC))),
-        hintText: "Password",
+        hintText: widget.hintText,
         hintStyle: AppStyle.style14font500black
             .copyWith(color: const Color(0xff666666)),
         enabledBorder: UnderlineInputBorder(
