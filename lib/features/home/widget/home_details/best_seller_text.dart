@@ -2,8 +2,8 @@ import 'package:digifly/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/app_style.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_style.dart';
 
 class BestSellerText extends StatelessWidget {
   const BestSellerText({super.key});

@@ -1,5 +1,6 @@
 import 'package:digifly/core/utils/app_colors.dart';
-import 'package:digifly/features/home/widget/home_details_view.dart';
+import 'package:digifly/features/home/widget/home_details/home_details_view.dart';
+import 'package:digifly/features/home/widget/text_editor/text_editor_view.dart';
 import 'package:digifly/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,8 +18,7 @@ class _HomeViewState extends State<HomeView> {
 
   final List<Widget> pages = [
     const HomeDetailsView(),
-    const Center(
-        child: Text("Text Editor Page", style: TextStyle(fontSize: 24))),
+    const TextEditorView(),
     const Center(child: Text("Setting Page", style: TextStyle(fontSize: 24))),
   ];
 
