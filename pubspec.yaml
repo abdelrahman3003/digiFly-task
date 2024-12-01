@@ -30,14 +30,16 @@ environment:
 dependencies:
   build_runner: ^2.4.13
   cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
+  firebase_auth: ^4.2.10
+  firebase_core: ^2.7.1
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.6
   flutter_localizations:
     sdk: flutter
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.16
-  firebase_auth: ^4.2.10
-  firebase_core: ^2.7.1
 
 dev_dependencies:
   flutter_lints: ^4.0.0
