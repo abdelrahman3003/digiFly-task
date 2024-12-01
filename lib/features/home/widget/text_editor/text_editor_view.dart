@@ -1,4 +1,6 @@
 import 'package:digifly/core/utils/app_style.dart';
+import 'package:digifly/core/utils/app_text_Form_filed.dart';
+import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class TextEditorView extends StatefulWidget {
@@ -38,7 +40,7 @@ class _TextEditorViewState extends State<TextEditorView> {
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "Text Editor",
+            S.of(context).text_editor,
             style: AppStyle.style16font700black,
           ),
         ),
@@ -47,7 +49,8 @@ class _TextEditorViewState extends State<TextEditorView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Introduce yourself", style: AppStyle.style16font700black),
+              Text(S.of(context).introduce,
+                  style: AppStyle.style16font700black),
               const SizedBox(height: 50),
               Container(
                 color: const Color(0xffF1EFF9),
@@ -105,12 +108,15 @@ class _TextEditorViewState extends State<TextEditorView> {
                       child: TextField(
                         controller: textController,
                         textAlign: textAlign,
+                        textDirection: isEnglish(context)
+                            ? TextDirection.ltr
+                            : TextDirection.rtl,
                         maxLines: null,
                         style: AppStyle.style14font700black
                             .copyWith(fontWeight: FontWeight.w400),
-                        decoration: const InputDecoration(
-                          hintText: 'اكتب النص هنا...',
-                          hintStyle: TextStyle(color: Colors.grey),
+                        decoration: InputDecoration(
+                          hintText: S.of(context).write_text,
+                          hintStyle: const TextStyle(color: Colors.grey),
                           border: InputBorder.none,
                           contentPadding: EdgeInsets.zero,
                         ),

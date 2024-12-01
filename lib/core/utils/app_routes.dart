@@ -10,7 +10,7 @@ class AppRoutes {
   static const String homeView = '/homepage';
   static Route generateRoute(RouteSettings setting) {
     switch (setting.name) {
-      case singinView:
+      case  singinView:
         return MaterialPageRoute(builder: (context) => const SigninView());
       case signupView:
         return MaterialPageRoute(builder: (context) => const SignupView());

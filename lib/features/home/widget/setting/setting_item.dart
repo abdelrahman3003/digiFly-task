@@ -19,7 +19,7 @@ class SettingItem extends StatelessWidget {
     return ListTile(
       contentPadding: const EdgeInsets.only(left: 10, top: 16),
       title: Text(title,
-          style: AppStyle.style16font700black
+          style: AppStyle.style14font500black
               .copyWith(fontWeight: FontWeight.w600)),
       leading: SvgPicture.asset(icon),
       trailing: Row(

@@ -32,6 +32,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.16
 
@@ -71,3 +73,5 @@ flutter:
           weight: 600
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_intl:
+  enabled: true

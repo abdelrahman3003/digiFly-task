@@ -1,3 +1,5 @@
+import 'package:digifly/generated/l10n.dart';
+
 import 'setting_item.dart';
 import 'space_container.dart';
 import 'user_list_tile.dart';
@@ -15,7 +17,7 @@ class SettingView extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Setting",
+          S.of(context).setting,
           style: AppStyle.style16font700black,
         ),
       ),
@@ -28,18 +30,25 @@ class SettingView extends StatelessWidget {
               const SpaceContainer(),
               const UserListTile(),
               const SizedBox(height: 40),
-              Text("Setting", style: AppStyle.style16font700black),
-              SettingItem(title: "Profile", icon: Assets.icons.profile),
+              Text(S.of(context).setting, style: AppStyle.style14font500black),
               SettingItem(
-                  title: "Languages",
+                  title: S.of(context).profile, icon: Assets.icons.profile),
+              SettingItem(
+                  title: S.of(context).languages,
                   icon: Assets.icons.language,
                   isLangauge: true),
               const SizedBox(height: 40),
-              Text("Contact us", style: AppStyle.style16font700black),
-              SettingItem(title: "Call us", icon: Assets.icons.contact),
-              SettingItem(title: "About us", icon: Assets.icons.exclamation),
+              Text(S.of(context).contact_us,
+                  style: AppStyle.style14font500black),
+              const SizedBox(height: 20),
+              SettingItem(
+                  title: S.of(context).call_us, icon: Assets.icons.contact),
+              SettingItem(
+                  title: S.of(context).about_us,
+                  icon: Assets.icons.exclamation),
               const SizedBox(height: 40),
-              SettingItem(title: "Sign out", icon: Assets.icons.signOut),
+              SettingItem(
+                  title: S.of(context).sign_out, icon: Assets.icons.signOut),
             ],
           ),
         ),
