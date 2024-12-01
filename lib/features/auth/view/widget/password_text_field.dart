@@ -1,3 +1,4 @@
+import 'package:digifly/core/utils/app_text_Form_filed.dart';
 import 'package:digifly/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -20,8 +21,13 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       obscureText: isVisibile,
       decoration: InputDecoration(
         prefixIcon: Padding(
-          padding: const EdgeInsets.only(right: 22, bottom: 10),
-          child: SvgPicture.asset(Assets.icons.lockSolid1),
+          padding: isEnglish(context)
+              ? const EdgeInsets.only(right: 22, bottom: 10)
+              : const EdgeInsets.only(left: 22, bottom: 10),
+          child: SvgPicture.asset(
+            Assets.icons.lockSolid1,
+            fit: BoxFit.scaleDown,
+            ),
         ),
         suffixIcon: IconButton(
             onPressed: () {

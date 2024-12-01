@@ -3,6 +3,7 @@ import 'package:digifly/features/home/widget/home_details/home_details_view.dart
 import 'package:digifly/features/home/widget/setting/setting_view.dart';
 import 'package:digifly/features/home/widget/text_editor/text_editor_view.dart';
 import 'package:digifly/gen/assets.gen.dart';
+import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -51,17 +52,17 @@ class _HomeViewState extends State<HomeView> {
         items: [
           buildNavBarItem(
             icon: Assets.icons.home,
-            label: "Home",
+            label: S.of(context).home,
             isSelected: currentIndex == 0,
           ),
           buildNavBarItem(
             icon: Assets.icons.textEditor,
-            label: "Text Editor",
+            label: S.of(context).text_editor,
             isSelected: currentIndex == 1,
           ),
           buildNavBarItem(
             icon: Assets.icons.setting,
-            label: "Setting",
+            label: S.of(context).setting,
             isSelected: currentIndex == 2,
           ),
         ],

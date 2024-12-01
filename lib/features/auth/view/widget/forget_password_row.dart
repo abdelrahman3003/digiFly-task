@@ -1,3 +1,4 @@
+import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_colors.dart';
@@ -30,9 +31,9 @@ class _ForgetPasswordRowState extends State<ForgetPasswordRow> {
           ),
         ),
         const SizedBox(width: 8),
-        Text("Remember me", style: AppStyle.style14font500black),
+        Text(S.of(context).remember_me, style: AppStyle.style14font500black),
         const Spacer(),
-        Text("Forgot Password ?",
+        Text(S.of(context).forgot_password,
             style: AppStyle.style14font500black
                 .copyWith(color: AppColors.primaryColor)),
       ],

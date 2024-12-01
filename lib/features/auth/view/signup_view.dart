@@ -2,6 +2,7 @@ import 'package:digifly/core/utils/app_routes.dart';
 import 'package:digifly/core/utils/app_text_Form_filed.dart';
 import 'package:digifly/core/utils/navigate.dart';
 import 'package:digifly/gen/assets.gen.dart';
+import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import '../../../core/utils/app_button.dart';
 import '../../../core/utils/app_style.dart';
@@ -24,28 +25,31 @@ class SignupView extends StatelessWidget {
               const SizedBox(height: 120),
               const Logo(),
               const SizedBox(height: 40),
-              Text("Create a new account", style: AppStyle.style18font600black),
+              Text(S.of(context).create_account,
+                  style: AppStyle.style18font600black),
               const SizedBox(height: 40),
-              AppTextFormFiled(hint: "Username", icon: Assets.icons.person),
+              AppTextFormFiled(
+                  hint: S.of(context).username, icon: Assets.icons.person),
               const SizedBox(height: 24),
-              AppTextFormFiled(hint: "Emai", icon: Assets.icons.mail),
+              AppTextFormFiled(
+                  hint: S.of(context).email, icon: Assets.icons.mail),
               const SizedBox(height: 24),
-              const PasswordTextField(hintText: "Password"),
+              PasswordTextField(hintText: S.of(context).password),
               const SizedBox(height: 24),
-              const PasswordTextField(hintText: "Confirm password"),
+              PasswordTextField(hintText: S.of(context).confirm_password),
               const SizedBox(height: 40),
               SizedBox(
                   width: double.infinity,
                   child: AppButton(
-                    title: "Sign up",
+                    title: S.of(context).sign_up,
                     onPressed: () {
                       context.pushNameed(AppRoutes.singinView);
                     },
                   )),
               const SizedBox(height: 60),
               DoHaveAccount(
-                title: "Already have an account ?",
-                subtitle: "Login",
+                title: S.of(context).Already_have,
+                subtitle: S.of(context).login,
                 onTap: () {
                   context.pushNameed(AppRoutes.singinView);
                 },

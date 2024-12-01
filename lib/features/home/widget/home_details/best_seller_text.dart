@@ -1,4 +1,5 @@
 import 'package:digifly/gen/assets.gen.dart';
+import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,12 +14,12 @@ class BestSellerText extends StatelessWidget {
     return Row(
       children: [
         Text(
-          "Best seller",
+          S.of(context).best_seller,
           style: AppStyle.style18font600black,
         ),
         const Spacer(),
         Text(
-          "View all",
+          S.of(context).view_all,
           style: AppStyle.style14font700black
               .copyWith(color: AppColors.primaryColor),
         ),

@@ -1,3 +1,4 @@
+import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_colors.dart';
@@ -30,18 +31,18 @@ class SellerItem extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(
-                "Deafult box, number 1 ",
+                S.of(context).deafult_box,
                 style: AppStyle.style14font500black,
               ),
               Row(
                 children: [
                   Text(
-                    "Category 1",
+                    S.of(context).category,
                     style: AppStyle.style12font600grey,
                   ),
                   const Spacer(),
                   Text(
-                    "1500 L.E",
+                    S.of(context).price,
                     style: AppStyle.style16font700wite
                         .copyWith(color: AppColors.primaryColor),
                   ),

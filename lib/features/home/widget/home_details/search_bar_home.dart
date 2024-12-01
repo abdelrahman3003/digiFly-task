@@ -3,6 +3,8 @@ import 'package:digifly/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../generated/l10n.dart';
+
 class SearchBarHome extends StatelessWidget {
   const SearchBarHome({super.key});
 
@@ -18,13 +20,13 @@ class SearchBarHome extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(4),
                     bottomLeft: Radius.circular(4))),
-            child: const TextField(
+            child: TextField(
               decoration: InputDecoration(
-                hintText: 'Search here ...',
-                hintStyle: TextStyle(color: Color(0xff999999)),
+                hintText: S.of(context).search_here,
+                hintStyle: const TextStyle(color: Color(0xff999999)),
                 border: InputBorder.none,
-                prefixIcon:
-                    Icon(Icons.search, size: 30, color: Color(0xff999999)),
+                prefixIcon: const Icon(Icons.search,
+                    size: 30, color: Color(0xff999999)),
               ),
             ),
           ),

@@ -12,8 +12,13 @@ class AppTextFormFiled extends StatelessWidget {
         prefixIcon: icon == null
             ? null
             : Padding(
-                padding: const EdgeInsets.only(right: 22, bottom: 10),
-                child: SvgPicture.asset(icon!),
+                padding: isEnglish(context)
+                    ? const EdgeInsets.only(right: 22, bottom: 10)
+                    : const EdgeInsets.only(left: 22, bottom: 10),
+                child: SvgPicture.asset(
+                  icon!,
+                  fit: BoxFit.scaleDown,
+                ),
               ),
         hintText: hint,
         hintStyle: AppStyle.style14font500black
@@ -30,4 +35,8 @@ class AppTextFormFiled extends StatelessWidget {
       ),
     );
   }
+}
+
+bool isEnglish(BuildContext context) {
+  return Localizations.localeOf(context).languageCode == "en";
 }
