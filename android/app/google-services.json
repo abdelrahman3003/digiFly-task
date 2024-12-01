@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "322381704427",
+    "project_id": "digi-fly-ed2d5",
+    "storage_bucket": "digi-fly-ed2d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322381704427:android:aa868f57af89fe8a3622ae",
+        "android_client_info": {
+          "package_name": "com.example.digifly"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJcyVdcjgd9DtnDKbv9nP7vdwRecj6bc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

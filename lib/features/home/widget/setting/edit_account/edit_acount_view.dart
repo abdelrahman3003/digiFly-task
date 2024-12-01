@@ -1,4 +1,5 @@
 import 'package:digifly/core/utils/app_button.dart';
+import 'package:digifly/core/utils/app_style.dart';
 import 'package:digifly/core/utils/navigate.dart';
 import 'package:digifly/features/home/widget/setting/edit_account/edit_account_item.dart';
 import 'package:digifly/features/home/widget/setting/space_container.dart';
@@ -22,7 +23,10 @@ class _EditAcountViewState extends State<EditAcountView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Edit Account"),
+          title: Text(
+            S.of(context).edit_account,
+            style: AppStyle.style16font700black,
+          ),
           leading: Padding(
             padding: const EdgeInsets.all(1),
             child: GestureDetector(

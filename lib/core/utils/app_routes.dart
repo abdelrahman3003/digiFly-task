@@ -2,8 +2,8 @@ import 'package:digifly/features/home/home_view.dart';
 import 'package:digifly/features/home/widget/setting/edit_account/edit_acount_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/auth/view/signin_view.dart';
-import '../../features/auth/view/signup_view.dart';
+import '../../features/auth/presentation/view/signin_view.dart';
+import '../../features/auth/presentation/view/signup_view.dart';
 
 class AppRoutes {
   static const String singinView = '/singinView';

@@ -3,7 +3,7 @@ import 'package:digifly/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/utils/app_style.dart';
+import '../../../../../core/utils/app_style.dart';
 
 class PasswordTextField extends StatefulWidget {
   const PasswordTextField({super.key, required this.hintText});

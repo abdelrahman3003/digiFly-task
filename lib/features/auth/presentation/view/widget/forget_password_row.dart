@@ -1,8 +1,8 @@
 import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_style.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_style.dart';
 
 class ForgetPasswordRow extends StatefulWidget {
   const ForgetPasswordRow({super.key});
