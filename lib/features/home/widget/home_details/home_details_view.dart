@@ -1,8 +1,8 @@
-import 'package:digifly/features/home/widget/best_seller_text.dart';
-import 'package:digifly/features/home/widget/fly_list.dart';
-import 'package:digifly/features/home/widget/profile_list_tile.dart';
-import 'package:digifly/features/home/widget/search_bar_home.dart';
-import 'package:digifly/features/home/widget/seller_item.dart';
+import 'package:digifly/features/home/widget/home_details/best_seller_text.dart';
+import 'package:digifly/features/home/widget/home_details/fly_list.dart';
+import 'package:digifly/features/home/widget/home_details/profile_list_tile.dart';
+import 'package:digifly/features/home/widget/home_details/search_bar_home.dart';
+import 'package:digifly/features/home/widget/home_details/seller_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeDetailsView extends StatelessWidget {
