@@ -12,12 +12,6 @@ TextAlign textAlign = TextAlign.left;
 TextEditingController textController = TextEditingController();
 
 class _TextEditorViewState extends State<TextEditorView> {
-  @override
-  void dispose() {
-    textController.dispose();
-    super.dispose();
-  }
-
   void addBulletPoints() {
     List<String> lines = textController.text.split('\n');
     String formattedText = lines.map((line) => '• $line').join('\n');
@@ -94,12 +88,10 @@ class _TextEditorViewState extends State<TextEditorView> {
                             });
                           },
                         ),
-                   
                         IconButton(
                           icon: const Icon(Icons.format_list_bulleted),
                           onPressed: addBulletPoints,
                         ),
-                    
                         IconButton(
                           icon: const Icon(Icons.format_list_numbered),
                           onPressed: addNumberedList,
@@ -118,11 +110,9 @@ class _TextEditorViewState extends State<TextEditorView> {
                             .copyWith(fontWeight: FontWeight.w400),
                         decoration: const InputDecoration(
                           hintText: 'اكتب النص هنا...',
-                          hintStyle: TextStyle(
-                              color: Colors.grey), 
-                          border: InputBorder.none, 
-                          contentPadding:
-                              EdgeInsets.zero, 
+                          hintStyle: TextStyle(color: Colors.grey),
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.zero,
                         ),
                       ),
                     ),
