@@ -1,3 +1,5 @@
+import 'package:digifly/core/utils/app_routes.dart';
+import 'package:digifly/core/utils/navigate.dart';
 import 'package:digifly/generated/l10n.dart';
 
 import 'setting_item.dart';
@@ -32,7 +34,12 @@ class SettingView extends StatelessWidget {
               const SizedBox(height: 40),
               Text(S.of(context).setting, style: AppStyle.style14font500black),
               SettingItem(
-                  title: S.of(context).profile, icon: Assets.icons.profile),
+                title: S.of(context).profile,
+                icon: Assets.icons.profile,
+                onTap: () {
+                  context.pushNameed(AppRoutes.editAccountView);
+                },
+              ),
               SettingItem(
                   title: S.of(context).languages,
                   icon: Assets.icons.language,

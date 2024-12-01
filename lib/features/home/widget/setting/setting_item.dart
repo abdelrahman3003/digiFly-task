@@ -17,6 +17,7 @@ class SettingItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: onTap,
       contentPadding: const EdgeInsets.only(left: 10, top: 16),
       title: Text(title,
           style: AppStyle.style14font500black
@@ -31,10 +32,7 @@ class SettingItem extends StatelessWidget {
           const SizedBox(width: 10),
           Padding(
             padding: const EdgeInsets.all(1),
-            child: GestureDetector(
-              onTap: onTap,
-              child: SvgPicture.asset(Assets.icons.arrowSimple, height: 18),
-            ),
+            child: SvgPicture.asset(Assets.icons.arrowSimple, height: 18),
           ),
         ],
       ),

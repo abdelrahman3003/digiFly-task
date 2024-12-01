@@ -18,8 +18,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/arrow-simple.svg
   String get arrowSimple => 'assets/icons/arrow-simple.svg';
 
+  /// File path: assets/icons/back-arrow.svg
+  String get backArrow => 'assets/icons/back-arrow.svg';
+
   /// File path: assets/icons/contact.svg
   String get contact => 'assets/icons/contact.svg';
+
+  /// File path: assets/icons/edit.svg
+  String get edit => 'assets/icons/edit.svg';
 
   /// File path: assets/icons/exclamation.svg
   String get exclamation => 'assets/icons/exclamation.svg';
@@ -64,7 +70,9 @@ class $AssetsIconsGen {
   List<String> get values => [
         google,
         arrowSimple,
+        backArrow,
         contact,
+        edit,
         exclamation,
         favourite,
         flter,
