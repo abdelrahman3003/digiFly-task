@@ -67,7 +67,7 @@ class _EditAcountViewState extends State<EditAcountView> {
                     setState(() {});
                   },
                 ),
-                const SizedBox(height: 120),
+                const SizedBox(height: 25),
                 const SizedBox(
                     width: double.infinity, child: AppButton(title: "Save"))
               ],
