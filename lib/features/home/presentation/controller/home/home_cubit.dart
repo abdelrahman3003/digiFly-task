@@ -21,7 +21,6 @@ class HomeCubit extends Cubit<HomeState> {
   late String initialFirstName;
   late String initialLastName;
   inilData() {
-    log("===========1");
     checkLoginStatus();
     initialFirstName = "Ahmed";
     initialLastName = "Alaa";
