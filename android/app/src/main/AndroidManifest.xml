@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    package="com.example.digifly">
     <application
         android:label="digifly"
         android:name="${applicationName}"

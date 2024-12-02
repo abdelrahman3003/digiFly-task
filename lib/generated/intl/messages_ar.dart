@@ -25,9 +25,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "Already_have":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل ؟"),
         "about_us": MessageLookupByLibrary.simpleMessage("من نحن"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "best_seller": MessageLookupByLibrary.simpleMessage("الأفضل مبيعاً"),
         "call_us": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
         "category": MessageLookupByLibrary.simpleMessage("فئة 1"),
+        "change_language": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
@@ -41,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit_account":
             MessageLookupByLibrary.simpleMessage("المعلومات الأساسية"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "first_name": MessageLookupByLibrary.simpleMessage("الإسم الأول"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور ؟"),
@@ -56,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "remember_me": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "search_here": MessageLookupByLibrary.simpleMessage("ابحث هنا ..."),
+        "select_language": MessageLookupByLibrary.simpleMessage("اختار اللغة"),
         "setting": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "sign_in_continue":
             MessageLookupByLibrary.simpleMessage("سجل الدخول للمتابعة"),

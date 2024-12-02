@@ -399,6 +399,46 @@ class S {
       args: [],
     );
   }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Languag`
+  String get change_language {
+    return Intl.message(
+      'Change Languag',
+      name: 'change_language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Language`
+  String get select_language {
+    return Intl.message(
+      'Select Language',
+      name: 'select_language',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
