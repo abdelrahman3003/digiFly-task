@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../gen/assets.gen.dart';
+import '../../../../../../gen/assets.gen.dart';
 
 class UserListTile extends StatelessWidget {
   const UserListTile({super.key});

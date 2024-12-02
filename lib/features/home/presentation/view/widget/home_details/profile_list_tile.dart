@@ -1,4 +1,4 @@
-import 'package:digifly/features/home/widget/home_details/stack_icon.dart';
+import 'package:digifly/features/home/presentation/view/widget/home_details/stack_icon.dart';
 import 'package:digifly/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 

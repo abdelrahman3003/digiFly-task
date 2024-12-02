@@ -1,9 +1,9 @@
 import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_style.dart';
-import '../../../../gen/assets.gen.dart';
+import '../../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/utils/app_style.dart';
+import '../../../../../../gen/assets.gen.dart';
 
 class SellerItem extends StatelessWidget {
   const SellerItem({super.key});

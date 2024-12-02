@@ -1,8 +1,8 @@
 import 'package:digifly/core/utils/app_button.dart';
 import 'package:digifly/core/utils/app_style.dart';
 import 'package:digifly/core/utils/navigate.dart';
-import 'package:digifly/features/home/widget/setting/edit_account/edit_account_item.dart';
-import 'package:digifly/features/home/widget/setting/space_container.dart';
+import 'package:digifly/features/home/presentation/view/widget/setting/edit_account/edit_account_item.dart';
+import 'package:digifly/features/home/presentation/view/widget/setting/space_container.dart';
 import 'package:digifly/gen/assets.gen.dart';
 import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';

@@ -6,8 +6,10 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../core/utils/app_style.dart';
 
 class PasswordTextField extends StatefulWidget {
-  const PasswordTextField({super.key, required this.hintText});
+  const PasswordTextField({super.key, required this.hintText, this.controller});
   final String hintText;
+  final TextEditingController? controller;
+
   @override
   State<PasswordTextField> createState() => _PasswordTextFieldState();
 }
@@ -18,7 +20,11 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: widget.controller,
       obscureText: isVisibile,
+      validator: (value) {
+        return validator(value);
+      },
       decoration: InputDecoration(
         prefixIcon: Padding(
           padding: isEnglish(context)
@@ -27,7 +33,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
           child: SvgPicture.asset(
             Assets.icons.lockSolid1,
             fit: BoxFit.scaleDown,
-            ),
+          ),
         ),
         suffixIcon: IconButton(
             onPressed: () {

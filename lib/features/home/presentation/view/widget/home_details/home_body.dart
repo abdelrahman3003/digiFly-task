@@ -1,20 +1,20 @@
 import 'package:digifly/core/utils/app_colors.dart';
-import 'package:digifly/features/home/widget/home_details/home_details_view.dart';
-import 'package:digifly/features/home/widget/setting/setting_view.dart';
-import 'package:digifly/features/home/widget/text_editor/text_editor_view.dart';
+import 'package:digifly/features/home/presentation/view/widget/home_details/home_details_view.dart';
+import 'package:digifly/features/home/presentation/view/widget/setting/setting_view.dart';
+import 'package:digifly/features/home/presentation/view/widget/text_editor/text_editor_view.dart';
 import 'package:digifly/gen/assets.gen.dart';
 import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+class HomeBody extends StatefulWidget {
+  const HomeBody({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<HomeBody> createState() => _HomeBodyState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _HomeBodyState extends State<HomeBody> {
   int currentIndex = 0;
   final PageController pageController = PageController();
 

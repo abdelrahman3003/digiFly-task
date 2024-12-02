@@ -1,5 +1,6 @@
 import 'package:digifly/core/utils/app_routes.dart';
 import 'package:digifly/core/utils/navigate.dart';
+import 'package:digifly/features/home/presentation/view/widget/setting/logout_bloc_state.dart';
 import 'package:digifly/generated/l10n.dart';
 
 import 'setting_item.dart';
@@ -8,7 +9,7 @@ import 'user_list_tile.dart';
 import 'package:digifly/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_style.dart';
+import '../../../../../../core/utils/app_style.dart';
 
 class SettingView extends StatelessWidget {
   const SettingView({super.key});
@@ -54,8 +55,7 @@ class SettingView extends StatelessWidget {
                   title: S.of(context).about_us,
                   icon: Assets.icons.exclamation),
               const SizedBox(height: 40),
-              SettingItem(
-                  title: S.of(context).sign_out, icon: Assets.icons.signOut),
+              const LogoutBlocStates()
             ],
           ),
         ),
