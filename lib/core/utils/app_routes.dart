@@ -13,6 +13,7 @@ class AppRoutes {
   static const String signupView = '/signupView';
   static const String homeView = '/homepage';
   static const String editAccountView = '/editAccountView';
+  static HomeCubit homeCubit = HomeCubit();
   SigninCubit signinCubit = SigninCubit();
   static Route generateRoute(RouteSettings setting) {
     switch (setting.name) {
@@ -33,12 +34,17 @@ class AppRoutes {
       case "/" || homeView:
         return MaterialPageRoute(
           builder: (context) => BlocProvider<HomeCubit>.value(
-            value: HomeCubit(),
+            value: homeCubit,
             child: const HomeView(),
           ),
         );
       case editAccountView:
-        return MaterialPageRoute(builder: (context) => const EditAcountView());
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider<HomeCubit>.value(
+            value: homeCubit,
+            child: const EditAcountView(),
+          ),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => Scaffold(

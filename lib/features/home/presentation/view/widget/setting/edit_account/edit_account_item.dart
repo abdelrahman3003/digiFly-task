@@ -11,10 +11,12 @@ class EditAccountItem extends StatelessWidget {
       required this.title,
       required this.subtitle,
       this.isEdit = false,
-      this.onTap});
+      this.onTap, this.onChanged, this.controller});
   final String title, subtitle;
   final bool isEdit;
+  final TextEditingController? controller;
   final Function()? onTap;
+  final Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,14 +28,17 @@ class EditAccountItem extends StatelessWidget {
           children: [
             isEdit
                 ? Expanded(
-                    child: TextField(
-                      controller: TextEditingController(text: subtitle),
+                    child: TextFormField(
+                      controller:controller,
                       style: AppStyle.style14font700black,
                       decoration: const InputDecoration(
                         hintStyle: TextStyle(color: Colors.grey),
                         border: InputBorder.none,
                         contentPadding: EdgeInsets.zero,
+                        
                       ),
+                      onChanged: onChanged,
+                      
                     ),
                   )
                 : Expanded(

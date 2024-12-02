@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../../../../gen/assets.gen.dart';
 
 class UserListTile extends StatelessWidget {
-  const UserListTile({super.key});
-
+  const UserListTile(
+      {super.key,
+      required this.firstNmae,
+      required this.subtitle,
+      required this.lastNmae});
+  final String firstNmae, lastNmae, subtitle;
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -18,13 +22,22 @@ class UserListTile extends StatelessWidget {
               Assets.images.proflePic.path,
             )),
       ),
-      title: const Text(
-        "Ahmed Alaa",
-        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      title: Row(
+        children: [
+          Text(
+            firstNmae,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(width: 6),
+          Text(
+            lastNmae,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+        ],
       ),
-      subtitle: const Text(
-        "ahmed.alaa123@gmail.com",
-        style: TextStyle(fontSize: 14, color: Colors.grey),
+      subtitle: Text(
+        subtitle,
+        style: const TextStyle(fontSize: 14, color: Colors.grey),
       ),
     );
   }

@@ -1,26 +1,22 @@
 import 'package:digifly/core/utils/app_button.dart';
+import 'package:digifly/core/utils/app_colors.dart';
 import 'package:digifly/core/utils/app_style.dart';
 import 'package:digifly/core/utils/navigate.dart';
+import 'package:digifly/features/home/presentation/controller/home/home_cubit.dart';
 import 'package:digifly/features/home/presentation/view/widget/setting/edit_account/edit_account_item.dart';
 import 'package:digifly/features/home/presentation/view/widget/setting/space_container.dart';
 import 'package:digifly/gen/assets.gen.dart';
 import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class EditAcountView extends StatefulWidget {
+class EditAcountView extends StatelessWidget {
   const EditAcountView({super.key});
 
   @override
-  State<EditAcountView> createState() => _EditAcountViewState();
-}
-
-bool isEditeFirstName = false;
-bool isEditeLastName = false;
-
-class _EditAcountViewState extends State<EditAcountView> {
-  @override
   Widget build(BuildContext context) {
+    var cubit = BlocProvider.of<HomeCubit>(context);
     return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -52,28 +48,95 @@ class _EditAcountViewState extends State<EditAcountView> {
                     title: S.of(context).email,
                     subtitle: "ahmed.alaa123@gmail.com"),
                 const SizedBox(height: 40),
-                EditAccountItem(
-                  title: S.of(context).first_name,
-                  subtitle: "Ahmed",
-                  isEdit: isEditeFirstName,
-                  onTap: () {
-                    isEditeFirstName = true;
-                    setState(() {});
+                BlocBuilder<HomeCubit, HomeState>(
+                  buildWhen: (previous, current) =>
+                      current is HomeEditFirstNameSuccess ||
+                      current is HomeSaveDataSucess,
+                  builder: (context, state) {
+                    if (state is HomeEditFirstNameSuccess) {
+                      return EditAccountItem(
+                        controller: cubit.firstNameController,
+                        title: S.of(context).first_name,
+                        subtitle: cubit.initialFirstName,
+                        isEdit: state.isEdit,
+                        onChanged: (value) {
+                          cubit.onChnage();
+                        },
+                      );
+                    }
+                    return EditAccountItem(
+                      controller: cubit.firstNameController,
+                      title: S.of(context).first_name,
+                      subtitle: cubit.initialFirstName,
+                      isEdit: cubit.isEditeFirstName,
+                      onTap: () {
+                        cubit.editFirstName();
+                      },
+                    );
                   },
                 ),
                 const SizedBox(height: 40),
-                EditAccountItem(
-                  title: S.of(context).last_name,
-                  subtitle: "Alaa",
-                  isEdit: isEditeLastName,
-                  onTap: () {
-                    isEditeLastName = true;
-                    setState(() {});
+                BlocBuilder<HomeCubit, HomeState>(
+                  buildWhen: (previous, current) =>
+                      current is HomeEditLastNameSuccess ||
+                      current is HomeSaveDataSucess,
+                  builder: (context, state) {
+                    if (state is HomeEditLastNameSuccess) {
+                      return EditAccountItem(
+                        controller: cubit.lastNameController,
+                        title: S.of(context).last_name,
+                        subtitle: cubit.initialLastName,
+                        isEdit: state.isEdit,
+                        onChanged: (value) {
+                          cubit.onChnage();
+                        },
+                      );
+                    }
+                    return EditAccountItem(
+                      controller: cubit.lastNameController,
+                      title: S.of(context).last_name,
+                      subtitle: cubit.initialLastName,
+                      isEdit: false,
+                      onTap: () {
+                        cubit.editLasttName();
+                      },
+                    );
                   },
                 ),
                 const SizedBox(height: 25),
-                const SizedBox(
-                    width: double.infinity, child: AppButton(title: "Save"))
+                BlocBuilder<HomeCubit, HomeState>(
+                  buildWhen: (previous, current) =>
+                      current is HomeEditOnChangedSucess ||
+                      current is HomeSaveDataLoading ||
+                      current is HomeSaveDataSucess,
+                  builder: (context, state) {
+                    if (state is HomeEditOnChangedSucess) {
+                      return SizedBox(
+                          width: double.infinity,
+                          child: AppButton(
+                            title: "Save",
+                            color: AppColors.primaryColor,
+                            onPressed: () {
+                              cubit.saveData();
+                            },
+                          ));
+                    } else if (state is HomeSaveDataLoading) {
+                      return const SizedBox(
+                          width: double.infinity,
+                          child: AppButton(
+                            title: "Save",
+                            color: AppColors.primaryColor,
+                            isLoading: true,
+                          ));
+                    }
+                    return const SizedBox(
+                        width: double.infinity,
+                        child: AppButton(
+                          title: "Save",
+                          color: Colors.grey,
+                        ));
+                  },
+                )
               ],
             ),
           ),

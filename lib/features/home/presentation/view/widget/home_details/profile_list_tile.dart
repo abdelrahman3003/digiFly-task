@@ -1,6 +1,8 @@
+import 'package:digifly/features/home/presentation/controller/home/home_cubit.dart';
 import 'package:digifly/features/home/presentation/view/widget/home_details/stack_icon.dart';
 import 'package:digifly/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProfileListTile extends StatelessWidget {
   const ProfileListTile({
@@ -9,6 +11,7 @@ class ProfileListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var cubit = BlocProvider.of<HomeCubit>(context);
     return ListTile(
       contentPadding: EdgeInsets.zero,
       leading: CircleAvatar(
@@ -20,9 +23,18 @@ class ProfileListTile extends StatelessWidget {
               Assets.images.proflePic.path,
             )),
       ),
-      title: const Text(
-        "Ahmed Alaa",
-        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      title: Row(
+        children: [
+          Text(
+            cubit.initialFirstName,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(width: 8),
+          Text(
+            cubit.initialLastName,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+        ],
       ),
       subtitle: const Text(
         "Welcome",

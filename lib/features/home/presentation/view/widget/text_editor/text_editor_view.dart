@@ -1,3 +1,4 @@
+import 'package:digifly/core/utils/app_colors.dart';
 import 'package:digifly/core/utils/app_style.dart';
 import 'package:digifly/core/utils/app_text_Form_filed.dart';
 import 'package:digifly/generated/l10n.dart';
@@ -107,7 +108,8 @@ class _TextEditorViewState extends State<TextEditorView> {
                       alignment: Alignment.center,
                       child: TextField(
                         controller: textController,
-                        textAlign: textAlign,
+                        cursorColor: AppColors.primaryColor,
+                        textAlign: TextAlign.start,
                         textDirection: isEnglish(context)
                             ? TextDirection.ltr
                             : TextDirection.rtl,
