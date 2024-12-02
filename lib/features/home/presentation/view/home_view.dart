@@ -1,3 +1,4 @@
+
 import 'package:digifly/core/utils/app_routes.dart';
 import 'package:digifly/core/utils/navigate.dart';
 import 'package:digifly/features/home/presentation/controller/home/home_cubit.dart';
@@ -12,11 +13,14 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) =>
-          current is HomeGetUserLoading || current is HomeGetUserFailed,
+          current is HomeGetUserLoading ||
+          current is HomeGetUserFailed ||
+          current is HomeGetUserSucess,
       builder: (context, state) {
         if (state is HomeGetUserSucess) {
           return const HomeBody();
         } else if (state is HomeGetUserFailed) {
+
           WidgetsBinding.instance.addPostFrameCallback((_) {
             context.pushReplacementNamed(AppRoutes.singinView);
           });

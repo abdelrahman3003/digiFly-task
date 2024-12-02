@@ -25,9 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "Already_have":
             MessageLookupByLibrary.simpleMessage("Already have an account ?"),
         "about_us": MessageLookupByLibrary.simpleMessage("About us"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "best_seller": MessageLookupByLibrary.simpleMessage("Best seller"),
         "call_us": MessageLookupByLibrary.simpleMessage("Call us"),
         "category": MessageLookupByLibrary.simpleMessage("Category 1"),
+        "change_language":
+            MessageLookupByLibrary.simpleMessage("Change Languag"),
         "confirm_password":
             MessageLookupByLibrary.simpleMessage("Confirm password"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
@@ -41,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Don’t have an account ?"),
         "edit_account": MessageLookupByLibrary.simpleMessage("Edit Account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "first_name": MessageLookupByLibrary.simpleMessage("First name"),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot Password ?"),
@@ -57,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "remember_me": MessageLookupByLibrary.simpleMessage("Remember me"),
         "search_here": MessageLookupByLibrary.simpleMessage("Search here ..."),
+        "select_language":
+            MessageLookupByLibrary.simpleMessage("Select Language"),
         "setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "sign_in_continue":
             MessageLookupByLibrary.simpleMessage("Sign in to continue"),

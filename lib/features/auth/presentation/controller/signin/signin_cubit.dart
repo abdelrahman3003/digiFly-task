@@ -14,7 +14,6 @@ class SigninCubit extends Cubit<SigninState> {
   UserCredential? userCredential;
   String? errorMessege;
 
-  // Controllers for email and password input
   TextEditingController emailController =
       TextEditingController(text: "abdo@gmail.com");
   TextEditingController passwordController =

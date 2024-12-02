@@ -30,7 +30,7 @@ class AppRoutes {
             child: const SignupView(),
           ),
         );
-      case "/":
+      case "/" || homeView:
         return MaterialPageRoute(
           builder: (context) => BlocProvider<HomeCubit>.value(
             value: HomeCubit(),

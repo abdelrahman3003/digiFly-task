@@ -33,5 +33,10 @@
     "edit_account":"المعلومات الأساسية" ,
     "first_name":"الإسم الأول" ,
     "last_name":"الإسم الأخير" ,
-    "home":"الرئيسية" 
+    "home":"الرئيسية" ,
+    "english":"الإنجليزية" ,
+    "arabic": "العربية",
+    "change_language":"تغيير اللغة" ,
+    "select_language":"اختار اللغة" 
+
 }

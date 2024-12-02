@@ -1,5 +1,6 @@
 import 'package:digifly/core/utils/app_routes.dart';
 import 'package:digifly/core/utils/navigate.dart';
+import 'package:digifly/features/home/presentation/view/widget/setting/change_language_view.dart';
 import 'package:digifly/features/home/presentation/view/widget/setting/logout_bloc_state.dart';
 import 'package:digifly/generated/l10n.dart';
 
@@ -42,9 +43,16 @@ class SettingView extends StatelessWidget {
                 },
               ),
               SettingItem(
-                  title: S.of(context).languages,
-                  icon: Assets.icons.language,
-                  isLangauge: true),
+                title: S.of(context).languages,
+                icon: Assets.icons.language,
+                isLangauge: true,
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChangeLanguageView()));
+                },
+              ),
               const SizedBox(height: 40),
               Text(S.of(context).contact_us,
                   style: AppStyle.style14font500black),

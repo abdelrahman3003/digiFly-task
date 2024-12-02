@@ -1,4 +1,7 @@
+import 'package:digifly/features/auth/presentation/controller/local/local_cubit.dart';
+import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../../core/utils/app_style.dart';
@@ -28,7 +31,15 @@ class SettingItem extends StatelessWidget {
         children: [
           isLangauge == null
               ? const SizedBox()
-              : Text("العربية", style: AppStyle.style14font700black),
+              : BlocBuilder<LocalCubit, AppLanguage>(
+                  builder: (context, state) {
+                    return Text(
+                        state == AppLanguage.ar
+                            ? S.of(context).arabic
+                            : S.of(context).arabic,
+                        style: AppStyle.style14font700black);
+                  },
+                ),
           const SizedBox(width: 10),
           Padding(
             padding: const EdgeInsets.all(1),
