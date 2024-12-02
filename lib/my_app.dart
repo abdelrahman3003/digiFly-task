@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:digifly/core/utils/app_colors.dart';
 import 'package:digifly/core/utils/app_routes.dart';
+import 'package:digifly/core/utils/sharded_pref.dart';
 import 'package:digifly/features/auth/presentation/controller/local/local_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -49,10 +50,18 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   onGenerateRoute: AppRoutes.generateRoute,
+                  initialRoute: initRout(),
                 );
               },
             ),
           );
         });
   }
+}
+String initRout() {
+  if (AppService.sharedPreferences.getString(ShardedPrefKey.step) == "1") {
+    return AppRoutes.homeView;
+  }
+
+  return AppRoutes.singinView;
 }

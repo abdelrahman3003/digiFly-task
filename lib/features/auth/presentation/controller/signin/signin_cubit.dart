@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:digifly/core/utils/sharded_pref.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
@@ -14,10 +15,8 @@ class SigninCubit extends Cubit<SigninState> {
   UserCredential? userCredential;
   String? errorMessege;
 
-  TextEditingController emailController =
-      TextEditingController(text: "abdo@gmail.com");
-  TextEditingController passwordController =
-      TextEditingController(text: "12345");
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
@@ -27,6 +26,7 @@ class SigninCubit extends Cubit<SigninState> {
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
+      AppService.sharedPreferences.setString(ShardedPrefKey.step, "1");
       log("Sign-in successful: ${userCredential!.user?.email}");
     } on FirebaseAuthException catch (e) {
       log("FirebaseAuthException: ${e.code}");

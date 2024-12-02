@@ -11,14 +11,10 @@ class SignupCubit extends Cubit<SignupState> {
   final FirebaseAuth auth = FirebaseAuth.instance;
   UserCredential? userCredential;
   String? errorMessege;
-  TextEditingController usernameController =
-      TextEditingController(text: "abdo14");
-  TextEditingController emailController =
-      TextEditingController(text: "abdo14@gmail.com");
-  TextEditingController passwordController =
-      TextEditingController(text: "123456");
-  TextEditingController confirmPasswordController =
-      TextEditingController(text: "123456");
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   Future<void> registerWithEmail() async {

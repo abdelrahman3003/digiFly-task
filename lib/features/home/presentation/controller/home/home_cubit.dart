@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
+import 'package:digifly/core/utils/sharded_pref.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
@@ -42,6 +41,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(HomeLogOutLoading());
     try {
       await auth.signOut();
+      AppService.sharedPreferences.setString(ShardedPrefKey.step, "0");
       emit(HomeLogOutSucess());
     } catch (e) {
       emit(HomeLogOutFailed());
