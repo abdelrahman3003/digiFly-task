@@ -37,6 +37,7 @@
     "english":"الإنجليزية" ,
     "arabic": "العربية",
     "change_language":"تغيير اللغة" ,
-    "select_language":"اختار اللغة" 
+    "select_language":"اختار اللغة" ,
+    "save":"حفظ" 
 
 }

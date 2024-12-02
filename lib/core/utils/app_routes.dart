@@ -14,13 +14,13 @@ class AppRoutes {
   static const String homeView = '/homepage';
   static const String editAccountView = '/editAccountView';
   static HomeCubit homeCubit = HomeCubit();
-  SigninCubit signinCubit = SigninCubit();
+
   static Route generateRoute(RouteSettings setting) {
     switch (setting.name) {
       case singinView:
         return MaterialPageRoute(
           builder: (context) => BlocProvider<SigninCubit>.value(
-            value: SigninCubit(),
+            value: SigninCubit(homeCubit),
             child: const SigninView(),
           ),
         );

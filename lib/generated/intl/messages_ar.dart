@@ -58,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "price": MessageLookupByLibrary.simpleMessage("1500 ج.م"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "remember_me": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "search_here": MessageLookupByLibrary.simpleMessage("ابحث هنا ..."),
         "select_language": MessageLookupByLibrary.simpleMessage("اختار اللغة"),
         "setting": MessageLookupByLibrary.simpleMessage("الإعدادات"),

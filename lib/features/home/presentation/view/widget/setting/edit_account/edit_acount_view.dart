@@ -46,7 +46,7 @@ class EditAcountView extends StatelessWidget {
                 const SizedBox(height: 40),
                 EditAccountItem(
                     title: S.of(context).email,
-                    subtitle: "ahmed.alaa123@gmail.com"),
+                    subtitle: cubit.email??""),
                 const SizedBox(height: 40),
                 BlocBuilder<HomeCubit, HomeState>(
                   buildWhen: (previous, current) =>
@@ -114,25 +114,25 @@ class EditAcountView extends StatelessWidget {
                       return SizedBox(
                           width: double.infinity,
                           child: AppButton(
-                            title: "Save",
+                            title: S.of(context).save,
                             color: AppColors.primaryColor,
                             onPressed: () {
                               cubit.saveData();
                             },
                           ));
                     } else if (state is HomeSaveDataLoading) {
-                      return const SizedBox(
+                      return  SizedBox(
                           width: double.infinity,
                           child: AppButton(
-                            title: "Save",
+                            title: S.of(context).save,
                             color: AppColors.primaryColor,
                             isLoading: true,
                           ));
                     }
-                    return const SizedBox(
+                    return  SizedBox(
                         width: double.infinity,
                         child: AppButton(
-                          title: "Save",
+                          title: S.of(context).save,
                           color: Colors.grey,
                         ));
                   },

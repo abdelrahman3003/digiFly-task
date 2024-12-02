@@ -24,6 +24,7 @@ class SettingView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        leading: const SizedBox(),
         title: Text(
           S.of(context).setting,
           style: AppStyle.style16font700black,
@@ -41,15 +42,14 @@ class SettingView extends StatelessWidget {
                 builder: (context, state) {
                   if (state is HomeSaveDataSucess) {
                     return UserListTile(
-                      firstNmae: cubit.initialFirstName,
-                      lastNmae: cubit.initialLastName,
-                      subtitle: "ahmed.alaa123@gmail.com",
-                    );
+                        firstNmae: cubit.initialFirstName,
+                        lastNmae: cubit.initialLastName,
+                        subtitle: cubit.email ?? "");
                   }
                   return UserListTile(
                     firstNmae: cubit.initialFirstName,
                     lastNmae: cubit.initialLastName,
-                    subtitle: "ahmed.alaa123@gmail.com",
+                    subtitle: cubit.email ?? "",
                   );
                 },
               ),

@@ -40,6 +40,7 @@ class _TextEditorViewState extends State<TextEditorView> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
+          leading: const SizedBox(),
           title: Text(
             S.of(context).text_editor,
             style: AppStyle.style16font700black,

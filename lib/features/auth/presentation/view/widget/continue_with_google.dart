@@ -1,3 +1,4 @@
+import 'package:digifly/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -20,7 +21,7 @@ class ContinueWithGoogle extends StatelessWidget {
             Expanded(
               child: Center(
                 child: Text(
-                  "Contiue with Google",
+                  S.of(context).contiue_with_google,
                   style: AppStyle.style14font700black,
                 ),
               ),

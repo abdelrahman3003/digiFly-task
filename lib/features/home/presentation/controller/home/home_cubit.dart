@@ -19,12 +19,14 @@ class HomeCubit extends Cubit<HomeState> {
   bool isEditeLastName = false;
   late String initialFirstName;
   late String initialLastName;
+  String? email;
   inilData() {
     checkLoginStatus();
-    initialFirstName = "Ahmed";
-    initialLastName = "Alaa";
+    initialFirstName = "firstname";
+    initialLastName = "lastname";
     firstNameController = TextEditingController(text: initialFirstName);
     lastNameController = TextEditingController(text: initialLastName);
+    email = user?.email;
   }
 
   checkLoginStatus() async {
@@ -43,6 +45,7 @@ class HomeCubit extends Cubit<HomeState> {
       await auth.signOut();
       AppService.sharedPreferences.setString(ShardedPrefKey.step, "0");
       emit(HomeLogOutSucess());
+      resetToInitialState();
     } catch (e) {
       emit(HomeLogOutFailed());
     }
@@ -70,5 +73,9 @@ class HomeCubit extends Cubit<HomeState> {
     initialLastName = lastNameController.text;
     await Future.delayed(const Duration(milliseconds: 800));
     emit(HomeSaveDataSucess());
+  }
+
+  void resetToInitialState() {
+    emit(HomeInitial());
   }
 }

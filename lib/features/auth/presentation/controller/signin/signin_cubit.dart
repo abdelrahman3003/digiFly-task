@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:digifly/core/utils/sharded_pref.dart';
+import 'package:digifly/features/home/presentation/controller/home/home_cubit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
@@ -9,8 +10,8 @@ import 'package:meta/meta.dart';
 part 'signin_state.dart';
 
 class SigninCubit extends Cubit<SigninState> {
-  SigninCubit() : super(SigninInitial());
-
+  SigninCubit(this.homeCubit) : super(SigninInitial());
+  final HomeCubit homeCubit;
   final FirebaseAuth auth = FirebaseAuth.instance;
   UserCredential? userCredential;
   String? errorMessege;
