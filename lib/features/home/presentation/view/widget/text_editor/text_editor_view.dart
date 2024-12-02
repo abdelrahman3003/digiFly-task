@@ -109,7 +109,7 @@ class _TextEditorViewState extends State<TextEditorView> {
                       child: TextField(
                         controller: textController,
                         cursorColor: AppColors.primaryColor,
-                        textAlign: TextAlign.start,
+                        textAlign: textAlign,
                         textDirection: isEnglish(context)
                             ? TextDirection.ltr
                             : TextDirection.rtl,
